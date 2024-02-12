@@ -1,0 +1,7 @@
+# Instructions:
+#--------------------------------------------------------------------------------------------
+# To obtain an API key, follow these steps:
+# 1. Log in to your account at [Weather API Dashboard](https://www.weatherapi.com/login.aspx).
+# 2. Navigate to the dashboard section.
+# 3. Generate a new API key.
+#--------------------------------------------------------------------------------------------

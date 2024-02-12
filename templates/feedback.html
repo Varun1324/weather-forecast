@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='feedstyle.css')}}">
+</head>
+<body>
+    <div class="nav">
+        <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1694105607/weather/weatherlogo_vsn5pt.jpg" alt="" class="logo">
+        <a href=" " class="a-title"><label for="" class="title">Weather</label></a>
+        <ul>
+            <li><a href="{{url_for('weather')}}">Home</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('feedback')}}">Feedback</a></li>
+        </ul>
+    </div>
+    <div class="cont">
+        <center>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFay0w3clwITwE-crwNapsOlSHFIftSw-vuxOVlqu0kAznDw/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0" class="frame">Loading…</iframe>
+        </center>
+    </div>
+    <footer>
+        Designed and developed by <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1707761017/logo_vk_qhha8n.png" alt="logo_" id="vk">
+    </footer>
+</body>
+</html>

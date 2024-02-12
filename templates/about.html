@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='aboutstyle.css')}}">
+</head>
+<body>
+    <div class="nav">
+        <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1694105607/weather/weatherlogo_vsn5pt.jpg" alt="" class="logo">
+        <a href=" " class="a-title"><label for="" class="title">Weather</label></a>
+        <ul>
+            <li><a href="{{url_for('weather')}}">Home</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('feedback')}}">Feedback</a></li>
+        </ul>
+    </div>
+    <center>
+    <div class="sec">
+        <u><h4>About</h4></u>
+        <div class="cont">
+            <p>
+                Weather detection website using Python and APIs involves building a web application that retrieves weather data from an external weather service, like Weatherapi. The fetched weather data is then dynamically displayed on the website, offering users real-time information about temperature, humidity, and weather conditions. This project can be further enhanced with additional features, such as geolocation or historical weather data retrieval, to create a comprehensive weather information platform.
+            </p>
+        </div>
+    </div>
+    </center>
+    <footer>
+        Designed and developed by <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1707761017/logo_vk_qhha8n.png" alt="logo_" id="vk">
+    </footer>
+</body>
+</html>

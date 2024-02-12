@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='contactstyle.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1694105607/weather/weatherlogo_vsn5pt.jpg" alt="" class="logo">
+        <a href=" " class="a-title"><label for="" class="title">Weather</label></a>
+        <ul>
+            <li><a href="{{url_for('weather')}}">Home</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('feedback')}}">Feedback</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="div-1">
+            <h4 class="contit">Contact Us</h4>
+        </div>
+        <div class="div-2">
+            <div class="img1"><i class="fab fa-youtube" id="youtube"></i></div>
+            <div class="img2"><i class="fab fa-facebook-square" id="facebook"></i></div>
+            <div class="img3"><i class="fab fa-instagram" id="insta"></i></div>
+        </div>
+        <div class="div-3">
+            <input type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="div-4">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+        </div>
+        <div class="div-5">
+            <button type="submit" class="sub">SUBMIT</button>
+        </div>
+
+    </div>
+    <footer>
+        Designed and developed by <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1707761017/logo_vk_qhha8n.png" alt="logo_" id="vk">
+    </footer>
+</body>
+</html>

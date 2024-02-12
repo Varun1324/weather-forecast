@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Detection</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='design.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1694105607/weather/weatherlogo_vsn5pt.jpg" alt="" class="logo">
+        <a href=" " class="a-title"><label for="" class="title">Weather</label></a>
+        <ul>
+            <li><a href="{{url_for('weather')}}">Home</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('feedback')}}">Feedback</a></li>
+        </ul>
+    </div>
+    <br><br>
+    <section>
+        <div class="maindiv">
+            
+            <div class="div-1">
+                <form method="post">
+                    <i class="fas fa-city"></i>
+                    <input type="text" name="name" class="int" placeholder="Enter city name" id="name">
+            </div>
+            <div class="div-2">
+                    <button type="submit" class="btn">Search  <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="div-3">
+                    <label><i class="fas fa-map-marker-alt"></i> Location : {{loc}}</label>
+                    <label><i class="fas fa-map"></i> Region : {{reg}}</label>
+                    <label><i class="fas fa-globe"></i> Country : {{coun}}</label>
+                    <label><i class="fas fa-temperature-low"></i> Temperature (°C) : {{tc}}</label>
+                    <label>Temperature (°F) : {{tf}}</label>
+                    <label><i class="fas fa-cloud-sun"></i> Condition : {{cond}}</label>
+                    <label><i class="fas fa-wind"></i> Wind : {{winspd}}</label>
+                    <label><i class="fas fa-tint"></i> Humidity : {{humi}}</label>
+                    <label><i class="fas fa-thermometer-three-quarters"></i> Feels like : {{felk}}</label>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+         Designed and developed by <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1707761017/logo_vk_qhha8n.png" alt="logo_" id="vk">
+    </footer>
+</body>
+</html>
