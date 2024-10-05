@@ -6,11 +6,16 @@
     <title>Weather Detection</title>
     <link rel="stylesheet" href="{{url_for('static',filename='design.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="{{ url_for('static', filename='scrpt.js') }}"></script>
 </head>
 <body>
     <div class="nav">
-        <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1694105607/weather/weatherlogo_vsn5pt.jpg" alt="" class="logo">
-        <a href=" " class="a-title"><label for="" class="title">Weather</label></a>
+        <h2 id="weather-forecast">Weather Forecast</h2>
+        <button style="background: none; border: none; cursor: pointer;" class="menu-btn" onclick="changemenu()" id="menuButton">
+            <i class="fas fa-bars" style="font-size: 1.5rem; color: white;" id="icon"></i>
+        </button>
+    </div>
+    <div class="ul-list">
         <ul>
             <li><a href="{{url_for('weather')}}">Home</a></li>
             <li><a href="{{url_for('about')}}">About</a></li>
@@ -18,36 +23,72 @@
             <li><a href="{{url_for('feedback')}}">Feedback</a></li>
         </ul>
     </div>
-    <br><br>
-    <section>
-        <div class="maindiv">
-            
-            <div class="div-1">
-                <form method="post">
-                    <i class="fas fa-city"></i>
-                    <input type="text" name="name" class="int" placeholder="Enter city name" id="name">
+    <div class="main-div">
+        <form id="myForm" method="post">
+            <div class="input-div">
+                <input type="text" name="name" class="int" placeholder="Enter city name" id="ip">
+                <button class="btn" type="submit">Submit</button>
             </div>
-            <div class="div-2">
-                    <button type="submit" class="btn">Search  <i class="fas fa-search"></i></button>
-                </form>
+        </form>
+        <div class="sub-div" style="display: {% if loc %}flex{% else %}none{% endif %};">
+            <div class="first">
+                <div class="date">
+                    <h5 id="datetime" style="font-style: italic;"></h5>
+                </div>
             </div>
-            
-            <div class="div-3">
-                    <label><i class="fas fa-map-marker-alt"></i> Location : {{loc}}</label>
-                    <label><i class="fas fa-map"></i> Region : {{reg}}</label>
-                    <label><i class="fas fa-globe"></i> Country : {{coun}}</label>
-                    <label><i class="fas fa-temperature-low"></i> Temperature (°C) : {{tc}}</label>
-                    <label>Temperature (°F) : {{tf}}</label>
-                    <label><i class="fas fa-cloud-sun"></i> Condition : {{cond}}</label>
-                    <label><i class="fas fa-wind"></i> Wind : {{winspd}}</label>
-                    <label><i class="fas fa-tint"></i> Humidity : {{humi}}</label>
-                    <label><i class="fas fa-thermometer-three-quarters"></i> Feels like : {{felk}}</label>
+            <div class="second">
+                <i class="fas fa-map-marker-alt" style="font-size: 1.5rem;"></i>
+                <div class="inner">
+                    <h3>{{loc}}</h3>
+                    <h4>{{reg}}</h4>
+                </div>
             </div>
-            
+            <div class="third">
+                <img src="{{img}}" alt="">
+                <h1>{{tc}}</h1>
+                <div class="sunrise">
+                    Feels Like <br> {{felk}}
+                </div>
+            </div>
+            <div class="round">
+                <span>Current Forecast</span>
+            </div>
+            <div class="fourth">
+                <h4>Wind Speed/Direction</h4>
+            </div>
+            <div class="fifth">
+                <div class="f1">
+                    <span>{{winspd}}</span>
+                    <span>Wind Speed</span>
+                </div>
+                <div class="f1">
+                    <span>{{windir}}</span>
+                    <span>Wind Direction</span>
+                </div>
+            </div>
+            <div class="sixth">
+                <h4>Other Parameters</h4>
+            </div>
+            <div class="seven">
+                <div class="s1">
+                    <span>{{humi}}</span>
+                    <span>Humidity</span>
+                </div>
+                <div class="s1">
+                    <span>{{precip_mm}}</span>
+                    <span>Precipitation</span>
+                </div>
+                <div class="s1">
+                    <span>{{cond}}</span>
+                    <span>Condition</span>
+                </div>
+            </div>
+            <small>Last Updated : {{lup}}</small>
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
         </div>
-    </section>
-    <footer>
-         Designed and developed by <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1707761017/logo_vk_qhha8n.png" alt="logo_" id="vk">
-    </footer>
+        
+    </div>
 </body>
 </html>

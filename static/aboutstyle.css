@@ -1,141 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 .nav{
-    margin-top: 5px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem;
     width: 100%;
-    height: 50px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 6px rgb(219, 212, 212);
-    padding-left: 25px;
-    padding-right: 25px;
+    height: 3.5rem;
+    box-shadow: 0px 1px 0px 0px rgba(9,30,66,.25);
+    background-color: #16394c;
 }
-.logo{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    float: left;
+#weather-forecast{
+    color: #ffffff;
+    font-family: Chakra Petch;
 }
-label{
+.ul-list{
+    width: inherit;
+    height: max-content;
     line-height: 50px;
+    display: none;
+    justify-content: right;
+    font-family: Chakra Petch;
+    background-color: #16394c;
 }
-.nav ul{
-    float: right;
-    list-style: none;
+.ul-list ul{
+   margin: 1rem;
+   list-style:none;
+   text-align: right;
 }
-.nav ul li{
-    display: inline-block;
-    padding: 15px;
-    font-family: Poppins;
-}
-.nav ul li a{
+.ul-list ul li a{
     text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-family: Poppins;
-}
-.nav ul li a:hover{
-    color: skyblue;
-    border: 2px solid skyblue;
-    padding: 1px;
-    background-color: skyblue;
-    color: aliceblue;
-    border-radius: 5px;
-}
-.title{
-    font-size: 35px;
-    margin: 10px;
-    font-family: Poppins;
-}
-.a-title{
-    text-decoration: none;
-    color: black;
-}
-.a-title:hover{
-    color: rgb(107, 208, 248);
-    text-decoration: overline rgb(255, 238, 0) 2px;
-}
-@media screen and (max-width:400px) {
-    .nav ul li a{
-        font-size: 0.7rem;
-    }
-    .title{
-        font-size: 25px;
-    }
-    .logo{
-        width: 40px;
-        height: 40px;
-    }
-}
-@media screen and (max-width:500px) {
-    .nav ul{
-        float: left;
-        justify-content: space-between;
-    }
-    .nav ul li a{
-        font-size: 0.8rem;
-    }
-    .title{
-        font-size: 1.6rem;
-    }
-    .logo{
-        width: 40px;
-        height: 40px;
-    }
-}
-@media screen and (max-width:370px) {
-    .nav ul li{
-        padding: 10px;
-    }
-}
-.cont{
-    width: 600px;
+    color: white;
     height: fit-content;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 6px rgb(219, 212, 212);
-    border-radius: 20px;
-    font-size: 15px;
-    font-family: Poppins;
-    padding: 10px;
 }
-h4{
-    font-size: 20px;
-    font-family: Poppins;
+.ul-list ul li a:hover{
+    text-decoration:double;
+    color: #74c69d;
 }
-.sec{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-footer{
-    width: 100%;
-    height: 30%;
-    background-color: skyblue;
-    text-align: center;
-    margin-top: 3%;
-    font-family: Poppins;
-    font-size: smaller;
-}
-#myc{
-    font-weight: bold;
-    color: blue;
-    text-decoration: none;
-}
-#vk
+.container
 {
-    margin: 0;
-    padding: 0;
-    width: 35px;
-    height: 35px;
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.title
+{
+    margin-top: 2.5rem;
+    width: 50%;
+    text-align: center;
+    font-family: Poppins;
+}
+.matter{
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 16%), 0 8px 10px 1px rgb(0 0 0 / 11%), 0 3px 14px 2px rgb(0 0 0 / 10%); 
+    background: #ffffff;
+    width: fit-content;
+    border-radius: 20px;
+    text-align:center;
+    padding: 2rem;
+    font-family: Poppins;
 }

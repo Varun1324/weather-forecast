@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
     <link rel="stylesheet" href="{{url_for('static',filename='feedstyle.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="{{ url_for('static', filename='scrpt.js') }}"></script>
 </head>
 <body>
     <div class="nav">
-        <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1694105607/weather/weatherlogo_vsn5pt.jpg" alt="" class="logo">
-        <a href=" " class="a-title"><label for="" class="title">Weather</label></a>
+        <h2 id="weather-forecast">Weather Forecast</h2>
+        <button style="background: none; border: none; cursor: pointer;" class="menu-btn" onclick="changemenu()" id="menuButton">
+            <i class="fas fa-bars" style="font-size: 1.5rem; color: white;" id="icon"></i>
+        </button>
+    </div>
+    <div class="ul-list">
         <ul>
             <li><a href="{{url_for('weather')}}">Home</a></li>
             <li><a href="{{url_for('about')}}">About</a></li>
@@ -18,12 +24,18 @@
         </ul>
     </div>
     <div class="cont">
-        <center>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFay0w3clwITwE-crwNapsOlSHFIftSw-vuxOVlqu0kAznDw/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0" class="frame">Loading…</iframe>
-        </center>
+        <div class="div-0">
+            <h2>Feedback</h2>
+        </div>
+        <div class="div-1">
+            <input type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="div-2">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+        </div>
+        <div class="div-3">
+            <button type="submit" class="sub">Submit</button>
+        </div>
     </div>
-    <footer>
-        Designed and developed by <img src="https://res.cloudinary.com/durc5ydxo/image/upload/v1707761017/logo_vk_qhha8n.png" alt="logo_" id="vk">
-    </footer>
 </body>
 </html>
